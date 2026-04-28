@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
   },
   "keywords": [],
   "author": "",
@@ -14,5 +15,14 @@
     "cors": "^2.8.6",
     "express": "^5.2.1",
     "mongoose": "^9.4.1"
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Sumuk1993/Full-stack-Project.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Sumuk1993/Full-stack-Project/issues"
+  },
+  "homepage": "https://github.com/Sumuk1993/Full-stack-Project#readme"
 }

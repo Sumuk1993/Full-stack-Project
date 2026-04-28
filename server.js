@@ -8,7 +8,9 @@ app.use(cors());                      // Enable CORS for all routes
 app.use(express.json());              // Middleware to parse JSON bodies in requests
 
 // connect DB
-mongoose.connect("mongodb://127.0.0.1:27017/tasks");// Connect to MongoDB at the specified URL and database name
+mongoose.connect("mongodb://127.0.0.1:27017/tasks")// Connect to MongoDB at the specified URL and database name
+  .then(() => console.log("MongoDB Connected"))    //success → "MongoDB Connected"
+  .catch(err => console.log(err));
 
 // schema
 const TaskSchema = new mongoose.Schema({// Define a Mongoose schema for tasks
@@ -46,3 +48,10 @@ app.delete("/tasks/:id", async (req, res) => { // Define a DELETE route to remov
 });
 
 app.listen(5000, () => console.log("Server running on port 5000"));// Start the server and listen on port 5000, logging a message to the console when the server is running
+
+// To run the server:
+
+// cd Redux_FullStack
+// npm init -y
+// npm install express mongoose cors
+// node server.js
